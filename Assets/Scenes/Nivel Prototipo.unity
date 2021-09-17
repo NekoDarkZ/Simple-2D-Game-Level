@@ -1618,7 +1618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerhealth: {fileID: 206631712}
-  DamageEnemyPoints: 1
+  DamageEnemyPoints: 3
 --- !u!1 &2033593863
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class EnemyAttack : MonoBehaviour
 {
     #region CLASS_VARIABLE
     public PlayerHealth playerhealth;
-    public int DamageEnemyPoints = 2;
+    public int DamageEnemyPoints = 3;
 
     #endregion
 
