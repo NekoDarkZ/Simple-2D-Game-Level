@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class DamageEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    #region CLASS_VARIABLE
+    public PlayerHealth playerhealth;
+    public int DamageEnemyPoints = 1;
+
+    #endregion
+
+    #region METODOS
+
+    public void DealDamage(){
+
+        playerhealth.TakeDamage(DamageEnemyPoints);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #endregion
 }

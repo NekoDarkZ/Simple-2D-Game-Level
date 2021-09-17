@@ -6,10 +6,11 @@ public class PlayerHealth : MonoBehaviour
 {
     #region Variables
 
-    private int lifePoints = 10;
+    public int lifePoints = 10;
 
     #endregion
 
+    
     #region Metodos
     public void TakeDamage(int damagePoints)
     {
