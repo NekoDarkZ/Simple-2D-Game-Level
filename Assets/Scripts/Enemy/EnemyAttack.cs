@@ -11,11 +11,21 @@ public class EnemyAttack : MonoBehaviour
 
     #endregion
 
+
+    #region unity_Metodos
+
+    public void Start()
+    {
+
+        DealDamage();
+    }
+
+    #endregion
+
     #region CLASS_METHODS
 
     public void DealDamage()
     {
-
         playerhealth.TakeDamage(damagePoints);
     }
 
