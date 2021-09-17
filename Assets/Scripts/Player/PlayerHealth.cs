@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
 
     #endregion
 
-    #region METHODS
+    #region CLASS_METHODS
 
     public void TakeDamage(int damagePoints)
     {
