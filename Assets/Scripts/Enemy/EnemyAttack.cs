@@ -7,7 +7,7 @@ public class EnemyAttack : MonoBehaviour
     #region Variables
 
     public PlayerHealth playerhealth;
-    public int damageEnemy = 2;
+    public int damagePoints = 2;
 
     #endregion
 
@@ -15,8 +15,9 @@ public class EnemyAttack : MonoBehaviour
 
     public void DealDamage()
     {
-        playerhealth.TakeDamage(damageEnemy);
 
+        playerhealth.TakeDamage(damagePoints);
     }
+
     #endregion
 }
