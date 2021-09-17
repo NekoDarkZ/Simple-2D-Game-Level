@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageEnemy : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
     #region CLASS_VARIABLE
     public PlayerHealth playerhealth;
-    public int DamageEnemyPoints = 1;
+    public int DamageEnemyPoints = 2;
 
     #endregion
 

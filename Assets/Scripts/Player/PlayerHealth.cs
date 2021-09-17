@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    #region Variables
+        #region Variables
 
     public int lifePoints = 10;
 
@@ -20,3 +20,4 @@ public class PlayerHealth : MonoBehaviour
     }
     #endregion
 }
+
