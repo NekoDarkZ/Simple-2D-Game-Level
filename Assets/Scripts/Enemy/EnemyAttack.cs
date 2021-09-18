@@ -8,7 +8,7 @@ public class EnemyAttack : MonoBehaviour
 
     public PlayerHealth playerhealth;
     public int damagePoints = 2;
-
+    
     #endregion
 
 

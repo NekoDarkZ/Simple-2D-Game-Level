@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float movementSpeed;
     [SerializeField] private float jumpSpeed;
+  
 
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -15,12 +16,15 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+   
     }
 
     // Start is called before the first frame update
     void Start()
     {
         
+
+       
     }
 
     // Update is called once per frame
