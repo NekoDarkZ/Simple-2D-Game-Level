@@ -32,6 +32,7 @@ public class EnemyAttack : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         DealDamage();
+        
     }
     #endregion
 }
