@@ -17,7 +17,7 @@ public class EnemyAttack : MonoBehaviour
     public void Start()
     {
 
-        DealDamage();
+        
     }
 
     #endregion
@@ -29,5 +29,9 @@ public class EnemyAttack : MonoBehaviour
         playerhealth.TakeDamage(damagePoints);
     }
 
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        DealDamage();
+    }
     #endregion
 }
