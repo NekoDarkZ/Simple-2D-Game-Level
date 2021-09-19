@@ -6,7 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
     public bool movingLeft;
 
-    public float strenght;
+    public float strenght = 300;
 
 
 
