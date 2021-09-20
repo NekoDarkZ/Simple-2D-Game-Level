@@ -8,22 +8,14 @@ public class PlayerHealth : MonoBehaviour
     public GameObject[] Health;
     public int LifePoints;
 
+    private void Start()
+    {
 
+        LifePoints = Health.Length;
+    }
 
     private void Update()
     {
-        if (LifePoints < 1)
-        {
-            Destroy(Health[0].gameObject);
-        }else if (LifePoints < 2)
-        {
-
-            Destroy(Health[1].gameObject);
-        }else if (LifePoints < 3)
-        {
-            Destroy(Health[2].gameObject);
-
-        }
 
     }
 
@@ -32,7 +24,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damagePoints)
     {
-        LifePoints -= damagePoints;
+        if (LifePoints >= 1)
+        {
+            LifePoints -= damagePoints;
+            Destroy(Health[LifePoints].gameObject);
+
+        }
+        
     }
 
     #endregion

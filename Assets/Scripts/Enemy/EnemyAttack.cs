@@ -24,15 +24,10 @@ public class EnemyAttack : MonoBehaviour
 
     #region CLASS_METHODS
 
-    public void DealDamage()
-    {
-        playerhealth.TakeDamage(damagePoints);
-    }
-
-
     private void OnCollisionEnter2D(Collision2D other)
     {
-        DealDamage();
+        playerhealth.TakeDamage(damagePoints);
+     
         
     }
     #endregion
