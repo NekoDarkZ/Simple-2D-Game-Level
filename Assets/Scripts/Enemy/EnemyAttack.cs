@@ -7,7 +7,7 @@ public class EnemyAttack : MonoBehaviour
     #region CLASS_Variables
 
     public PlayerHealth playerhealth;
-    public int damagePoints = 2;
+    public int damagePoints;
     
     #endregion
 
@@ -28,6 +28,7 @@ public class EnemyAttack : MonoBehaviour
     {
         playerhealth.TakeDamage(damagePoints);
     }
+
 
     private void OnCollisionEnter2D(Collision2D other)
     {
