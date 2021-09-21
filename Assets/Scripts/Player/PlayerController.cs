@@ -48,16 +48,4 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        EnemyMovement enemy = other.gameObject.GetComponent<EnemyMovement>();
-
-        if (enemy != null)
-        {
-            this.gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.left * enemy.strenght);
-
-        }
-
-    }
 }

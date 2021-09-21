@@ -4,40 +4,27 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    public bool movingLeft;
 
-    public float strenght = 300;
+    public float speedEnemy;
+    public bool MovLeft;
 
-
-
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        float speed = 0;
 
-        if (movingLeft)
+
+        if (MovLeft)
         {
-            speed = -1;
-            GetComponent<SpriteRenderer>().flipX = false;
+            speedEnemy = -1;
+
         }
         else
         {
-            speed = 1;
-            
-            GetComponent<SpriteRenderer>().flipX = true;
+
+            speedEnemy = 1;
+
         }
 
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
-
+        transform.Translate(Vector2.right * speedEnemy * Time.deltaTime);
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
 
-        EdgeCheck check = other.gameObject.GetComponent<EdgeCheck>();
-        if (check != null)
-        {
-        
-            movingLeft = !check.isBound;
-        }
-    }
 }

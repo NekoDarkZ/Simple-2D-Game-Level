@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
 
     public GameObject[] Health;
     public int LifePoints;
+    public EnemyAttack enemy;
 
     private void Start()
     {
@@ -27,11 +28,11 @@ public class PlayerHealth : MonoBehaviour
         if (LifePoints >= 1)
         {
             LifePoints -= damagePoints;
+            SoundManager.PlaySound("Player");
             Destroy(Health[LifePoints].gameObject);
-
+            
         }
         
     }
-
     #endregion
 }

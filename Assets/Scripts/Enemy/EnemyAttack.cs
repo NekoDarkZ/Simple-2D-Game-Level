@@ -24,11 +24,15 @@ public class EnemyAttack : MonoBehaviour
 
     #region CLASS_METHODS
 
+
     private void OnCollisionEnter2D(Collision2D other)
     {
-        playerhealth.TakeDamage(damagePoints);
-     
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerhealth.TakeDamage(damagePoints);
+            Destroy(this.gameObject);
         
+        }    
     }
     #endregion
 }
