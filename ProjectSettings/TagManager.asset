@@ -5,6 +5,18 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+<<<<<<< Updated upstream
+=======
+  - Coins
+  - Health
+  - borde
+  - canvas
+  - derrota
+  - victoria
+  - vacio
+  - gem
+  - Platform
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
