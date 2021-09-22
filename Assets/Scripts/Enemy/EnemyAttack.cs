@@ -6,7 +6,6 @@ public class EnemyAttack : MonoBehaviour
 {
     #region CLASS_Variables
 
-    public PlayerHealth playerhealth;
     public int damagePoints;
     
     #endregion
@@ -29,10 +28,10 @@ public class EnemyAttack : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            playerhealth.TakeDamage(damagePoints);
+            other.gameObject.GetComponent<PlayerHealth>().TakeDamage(damagePoints);
             Destroy(this.gameObject);
-        
-        }    
+
+        }
     }
     #endregion
 }

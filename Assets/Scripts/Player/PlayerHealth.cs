@@ -9,10 +9,13 @@ public class PlayerHealth : MonoBehaviour
     public int LifePoints;
     public EnemyAttack enemy;
 
+    private bool canTakeDamage;
+
     private void Start()
     {
 
         LifePoints = Health.Length;
+        canTakeDamage = true;
     }
 
     private void Update()
@@ -25,14 +28,27 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damagePoints)
     {
-        if (LifePoints >= 1)
+        if (canTakeDamage)
         {
-            LifePoints -= damagePoints;
-            SoundManager.PlaySound("Player");
-            Destroy(Health[LifePoints].gameObject);
-            
+            if (LifePoints >= 1) 
+            {
+                LifePoints -= damagePoints;
+                SoundManager.PlaySound("Player");
+                Destroy(Health[LifePoints].gameObject);
+                canTakeDamage = false;
+            }
+        }
+        else
+        {
+            StartCoroutine(Counter());
         }
         
+    }
+
+    IEnumerator Counter()
+    {
+        yield return new WaitForSeconds(2);
+        canTakeDamage = true;
     }
     #endregion
 }
