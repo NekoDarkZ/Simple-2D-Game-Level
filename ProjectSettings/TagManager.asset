@@ -7,6 +7,12 @@ TagManager:
   - Ground
   - Coins
   - Health
+  - gem
+  - borde
+  - derrota
+  - victoria
+  - canvas
+  - vacio
   layers:
   - Default
   - TransparentFX

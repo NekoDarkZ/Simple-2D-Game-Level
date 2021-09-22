@@ -5,8 +5,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-    public float speedEnemy;
-    public bool MovLeft;
+    private float speedEnemy;
+    private bool MovLeft = false;
 
     private void Update()
     {
@@ -14,17 +14,28 @@ public class EnemyMovement : MonoBehaviour
 
         if (MovLeft)
         {
-            speedEnemy = -1;
+            speedEnemy = -2;
 
         }
         else
         {
 
-            speedEnemy = 1;
+            speedEnemy = 2;
 
         }
 
         transform.Translate(Vector2.right * speedEnemy * Time.deltaTime);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.CompareTag("borde") && MovLeft == false)
+        {
+            MovLeft = true;
+        }
+        else if(other.gameObject.CompareTag("borde") && MovLeft == true)
+        {
+            MovLeft = false;
+        }
     }
 
 }

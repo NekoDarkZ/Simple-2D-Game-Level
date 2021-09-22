@@ -15,6 +15,7 @@ public class SoundManager : MonoBehaviour
 
         audioMoney = Resources.Load<AudioClip>("coin_pick"); //Audios en resources
         audioPlayer = Resources.Load<AudioClip>("player_damage");
+        audioGems = Resources.Load<AudioClip>("gem_pick");
         audioGen = GetComponent<AudioSource>();
     }
 
@@ -33,6 +34,10 @@ public class SoundManager : MonoBehaviour
                 break;
             case "Player":
                 audioGen.PlayOneShot(audioPlayer);
+                break;
+
+            case "Gem":
+                audioGen.PlayOneShot(audioGems);
                 break;
         }
 
