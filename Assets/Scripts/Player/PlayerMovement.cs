@@ -96,6 +96,5 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isGrounded", false);
         }
     }
-
     #endregion
 }

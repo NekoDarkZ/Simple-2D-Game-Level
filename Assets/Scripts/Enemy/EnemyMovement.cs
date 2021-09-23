@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
     private float speedEnemy;
     private bool MovLeft = false;
 
+
     private void Update()
     {
 
